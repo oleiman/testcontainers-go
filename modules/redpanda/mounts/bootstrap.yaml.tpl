@@ -17,6 +17,7 @@ kafka_enable_authorization: true
 
 {{- if .EnableWasmTransform }}
 data_transforms_enabled: true
+data_transforms_per_function_memory_limit: 20000000
 {{- end }}
 
 {{- if .AutoCreateTopics }}
