@@ -275,6 +275,7 @@ func renderBootstrapConfig(settings options) ([]byte, error) {
 		KafkaAPIEnableAuthorization: settings.KafkaEnableAuthorization,
 		AutoCreateTopics:            settings.AutoCreateTopics,
 		EnableWasmTransform:         settings.EnableWasmTransform,
+		ExtraBootstrapConfig:        settings.ExtraBootstrapConfig,
 	}
 
 	tpl, err := template.New("bootstrap.yaml").Parse(bootstrapConfigTpl)
@@ -349,6 +350,7 @@ type redpandaBootstrapConfigTplParams struct {
 	KafkaAPIEnableAuthorization bool
 	AutoCreateTopics            bool
 	EnableWasmTransform         bool
+	ExtraBootstrapConfig        map[string]any
 }
 
 type redpandaConfigTplParams struct {

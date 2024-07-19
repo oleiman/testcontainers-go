@@ -22,3 +22,10 @@ data_transforms_enabled: true
 {{- if .AutoCreateTopics }}
 auto_create_topics_enabled: true
 {{- end }}
+
+{{- if .ExtraBootstrapConfig }}
+{{- range $key, $value := .ExtraBootstrapConfig }}
+{{ $key }}: {{ $value }}
+{{- end }}
+{{- end }}
+
