@@ -59,3 +59,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gotest.tools/v3 v3.5.1 // indirect
 )
+
+replace github.com/testcontainers/testcontainers-go => github.com/oleiman/testcontainers-go redpanda-extra-config-form-mod
